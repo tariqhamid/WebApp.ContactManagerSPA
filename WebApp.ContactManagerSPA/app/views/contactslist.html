@@ -1,0 +1,18 @@
+﻿<div data-ng-controller="contactsController">
+    <div class="row" data-ng-repeat="contact in contacts">
+        <div id="contact_{{contact._id}}">
+            <div class="col-md-8">
+                <h3>{{contact.lastname}},{{contact.firstname}}</h3>
+                <h4>{{contact.email}},{{contact.company}}</h4>
+            </div>
+            <div class="controls col-md-4">
+                <h3 style="float:left">
+                    <a href="#contact/{{contact._id}}" title="Edit" class="glyphicon glyphicon-edit"></a>
+                </h3>
+                <h3>
+                    <a href="#contact/{{contact._id}}" title="Delete" class="glyphicon glyphicon-remove"></a>
+                </h3>
+            </div>           
+        </div>
+    </div>
+</div>

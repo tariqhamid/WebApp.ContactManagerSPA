@@ -1,0 +1,60 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body{   
+    background:#eeeeee;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 14px;
+}
+
+.controls a,
+.controls a:hover{
+    text-decoration:none;
+    color:gray;
+    padding:10px;
+}
+
+.welcome-message{
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    color: #9d9d9d;
+}
+
+.contact{
+    margin:20px;
+}
+
+
+@media (max-width: 768px) {
+    .welcome-message {
+        display: none;
+    }
+}
+
+/******* override bootrstrap classes *******/
+.navbar-inverse,
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:active{
+    margin-bottom:0px;
+    border-color:#2b3e50;
+    background-color:#2b3e50
+}
+
+.form-horizontal .control-label{
+    padding-top: 7px;
+}
+
+.form-control, .btn{
+    border-radius:0px;
+}
+
+.btn{
+    color:#9d9d9d;
+    background-color:#2b3e50;
+}
+
+.btn:hover{
+    background-color:#2b3e50;
+}
