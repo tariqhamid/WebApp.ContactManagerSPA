@@ -1,18 +1,24 @@
-﻿<div data-ng-controller="contactsController">
-    <div class="row" data-ng-repeat="contact in contacts">
+﻿<div data-ng-controller="contactsController" data-ng-init="getContacts()">
+    <div class="row contact" data-ng-repeat="contact in contacts">
         <div id="contact_{{contact._id}}">
             <div class="col-md-8">
                 <h3>{{contact.lastname}},{{contact.firstname}}</h3>
                 <h4>{{contact.email}},{{contact.company}}</h4>
             </div>
             <div class="controls col-md-4">
-                <h3 style="float:left">
-                    <a href="#contact/{{contact._id}}" title="Edit" class="glyphicon glyphicon-edit"></a>
+                <h3>
+                    <a href="contact/{{contact._id}}" title="Edit" class="glyphicon glyphicon-edit"></a>
                 </h3>
                 <h3>
-                    <a href="#contact/{{contact._id}}" title="Delete" class="glyphicon glyphicon-remove"></a>
+                    <a ng-href="#" ng-click="deleteContact(contact._id)" title="Delete" class="glyphicon glyphicon-remove"></a>
                 </h3>
             </div>           
+        </div>
+    </div>
+    <div class="statusRow">
+        <br />
+        <div class="label label-important">
+            <span class="glyphicon glyphicon-thumbs-down icon-white"></span>&nbsp;&nbsp;Error: {{ vm.err }}
         </div>
     </div>
 </div>

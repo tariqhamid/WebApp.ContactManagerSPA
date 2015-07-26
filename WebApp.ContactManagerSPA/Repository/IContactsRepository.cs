@@ -12,5 +12,6 @@ namespace WebApp.ContactManagerSPA.Repository
         IEnumerable<Contact> GetCouchDBContacts();
         Contact GetCouchDBContact(string id);
         Response UpdateCouchDbContact(string id, Contact contact);
+        Response PostCouchDbContact(Contact contact);
     }
 }

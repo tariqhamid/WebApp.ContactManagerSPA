@@ -32,5 +32,10 @@ namespace WebApp.ContactManagerSPA.Services
         {
             return contactsRepository.UpdateCouchDbContact(id, contact);
         }
+
+        public Response PostContact(Contact contact)
+        {
+            return contactsRepository.PostCouchDbContact(contact);
+        }
     }
 }

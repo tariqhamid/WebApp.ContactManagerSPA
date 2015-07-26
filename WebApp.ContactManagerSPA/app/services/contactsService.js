@@ -1,17 +1,34 @@
 ﻿'use strict';
 
-app.service('contactsService', ['$http', function ($http) {
+app.factory('contactsService', ['$http', function ($http) {
 
     var urlBase = 'api/Contacts';
-    this.getContacts = function () {
+    var factory = {};
+    factory.getContacts = function () {
         return $http.get(urlBase);
     };
 
-    this.getContact = function (id) {
+    factory.getContact = function (id) {
         return $http.get(urlBase + '/' + id);
     };
 
-    this.saveContact = function (id, contact) {
-        return $http.put(urlBase + '/' + id, contact);
+    factory.updateContact = function (id, contact) {
+        return $http.put(urlBase + '/' + id, contact).then(function (status) {
+            return status.data;
+        });
     };
+
+    factory.addContact = function (contact) {
+        return $http.post(urlBase + '/', contact).then(function (status) {
+            return status.data;
+        });
+    };
+
+    factory.deleteContact = function (id) {
+        return $http.delete(urlBase + '/' + id).then(function (status) {
+            return status.data;
+        });
+    };
+
+    return factory;
 }]);

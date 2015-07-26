@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Unity;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Net.Http.Formatting;
 using System.Web.Http;
 using WebApp.ContactManagerSPA.DAL;
 using WebApp.ContactManagerSPA.DI;
+using WebApp.ContactManagerSPA.Infrastructure;
 using WebApp.ContactManagerSPA.Repository;
 using WebApp.ContactManagerSPA.Services;
 
@@ -22,6 +24,7 @@ namespace WebApp.ContactManagerSPA
             var container = new UnityContainer();
             container.RegisterType<IContactsRepository, ContactsRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IContactsService, ContactsService>(new HierarchicalLifetimeManager());
+            container.RegisterType<ILogAdapter, Log4NetAdapter>(new HierarchicalLifetimeManager());
             config.DependencyResolver = new UnityResolver(container); 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -32,9 +35,7 @@ namespace WebApp.ContactManagerSPA
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            //var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
-            //jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-
+            
         }
     }
 }

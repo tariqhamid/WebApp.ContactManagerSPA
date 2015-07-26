@@ -2,7 +2,7 @@
 
 var app = angular.module('ContactManagerApp', ['ngRoute']);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     
     $routeProvider.when('/contacts', {
         controller: "contactsController",
@@ -12,6 +12,12 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: "contactEditController",
         templateUrl: "/app/views/contact.html",
         secure: true
+    })
+    .when('/contact', {
+        controller: "contactEditController",
+        templateUrl: "/app/views/contact.html",
     }).otherwise({ redirectTo: "/contacts" });
 
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
 }]);

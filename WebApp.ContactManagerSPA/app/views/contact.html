@@ -1,4 +1,5 @@
-﻿<div class="contact row" data-ng-controller="contactEditController">
+﻿<div class="contactEdit row" data-ng-controller="contactEditController">
+    <h2>{{(contact._id) ? 'Edit' : 'Add'}} Contact</h2>
     <form class="form-horizontal">
         <div class="form-group">
                 <input type="text" class="form-control" id="inputFirstname" ng-model="contact.firstname">
@@ -19,14 +20,19 @@
             <input type="text" class="form-control" id="inputMobile" ng-model="contact.mobile">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary" data-ng-click="saveContact()"><span data-ng-hide="loading">
-    Save
-</span>
+            <button type="submit" class="btn btn-primary" data-ng-click="saveContact()">
+                <span data-ng-hide="loading">{{(contact._id) ? 'Update' : 'Add'}}</span>
 
 <span data-ng-show="loading">
     Saving
     <i class="fa fa-spinner fa-spin"></i>
 </span></button>
+            <div class="statusRow">
+                <br />
+                <div class="label label-important" data-ng-show="vm.errorMessage">
+                    <span class="glyphicon glyphicon-thumbs-down icon-white"></span>&nbsp;&nbsp;Error: {{ $scope.status }}
+                </div>
+            </div>
         </div>
     </form>
 </div>

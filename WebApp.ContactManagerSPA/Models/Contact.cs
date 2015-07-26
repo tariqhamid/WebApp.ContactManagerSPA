@@ -1,20 +1,20 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using WebApp.ContactManagerSPA.Infrastructure.Domain;
 
 namespace WebApp.ContactManagerSPA.Models
 {
-    public class Contact
+    public class Contact:EntityBase<string>
     {
-        [JsonProperty("_id")]
-        public string Id { get; private set; }
         [JsonProperty("_rev")]
         public string Revision { get; set; }
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public string Type { get; set; } = "contact";
         [JsonProperty("firstname")]
         public string FirstName { get; set; }
         [JsonProperty("lastname")]

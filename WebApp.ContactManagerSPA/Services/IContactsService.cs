@@ -12,5 +12,6 @@ namespace WebApp.ContactManagerSPA.Services
         IEnumerable<Contact> GetContactsList();
         Contact GetContact(string id);
         Response UpdateContact(string id, Contact contact);
+        Response PostContact(Contact contact);
     }
 }

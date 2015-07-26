@@ -1,0 +1,120 @@
+2015-06-02 00:28:32,827 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idd2a18f36a12bf8a92d5910d093001243
+2015-06-02 00:30:06,602 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-02 00:30:08,922 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-02 00:31:32,083 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idd2a18f36a12bf8a92d5910d093001243
+2015-06-02 00:31:33,233 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idd2a18f36a12bf8a92d5910d093001243
+2015-06-02 00:45:05,203 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1001090
+2015-06-02 00:50:20,861 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-02 00:50:36,408 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-02 01:19:21,637 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-02 01:19:22,660 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-05 01:15:38,947 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-05 01:15:39,003 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1000f05
+2015-06-07 20:42:54,081 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:42:54,136 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:01,994 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:02,039 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:05,534 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:05,588 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:30,346 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:30,393 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:43:50,637 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:46:57,214 [23] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:46:57,266 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:47:55,929 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 20:47:55,976 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-06-07 21:03:30,227 [27] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1001090
+2015-06-07 21:03:31,383 [22] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id5bb30efdfb7ad799ad28179ed1001090
+2015-06-07 21:03:39,741 [14] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:03:41,966 [22] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:04:03,842 [26] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:04:05,985 [22] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:04:30,829 [27] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:04:32,889 [24] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:09:16,313 [7] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:10:17,825 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:10:20,015 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:12:59,749 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:13:36,635 [18] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:13:38,701 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:39:01,943 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:39:33,240 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:41:23,010 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:41:41,518 [7] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:42:40,985 [7] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:44:00,942 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:44:27,617 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:44:32,605 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:45:26,521 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:45:29,838 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:46:40,221 [9] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:46:41,367 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:57:53,367 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:57:54,683 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:58:31,187 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:58:32,310 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:59:08,411 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:59:09,576 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:59:28,519 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 21:59:29,678 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:00:37,924 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:00:39,058 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:24:20,461 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:24:51,178 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:25:45,688 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:25:46,924 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:26:18,002 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:26:19,196 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:44:08,018 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:44:09,381 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:44:23,150 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:44:24,284 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:06,878 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:08,018 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:12,908 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:13,852 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:14,074 [9] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 22:45:15,024 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:14,185 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:15,669 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:18,772 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:19,929 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:34,689 [11] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:25:35,832 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:03,712 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:04,872 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:10,894 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:12,076 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:20,779 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:26:21,915 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:29:54,918 [11] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-07 23:29:56,137 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:25:15,635 [53] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:25:16,793 [48] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:26:06,675 [53] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:26:07,906 [48] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:26:56,594 [53] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:26:57,756 [48] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:27:45,602 [61] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:27:46,747 [48] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:27:48,330 [61] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:27:49,486 [48] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:28:05,508 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:28:06,836 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:29:42,936 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:29:44,233 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:31:22,329 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:31:23,493 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:02,471 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:03,841 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:22,591 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:23,729 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:27,688 [5] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:28,814 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:32:59,674 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-06-08 00:33:01,054 [8] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-07-26 16:35:52,714 [7] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-07-26 18:01:54,148 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-07-26 18:03:01,597 [7] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-07-26 18:09:44,308 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
+2015-07-26 18:09:55,197 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idundefined
