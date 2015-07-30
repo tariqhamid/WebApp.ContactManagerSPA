@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 app.controller('contactsController', contactsController);
-contactsController.$inject=['$scope', 'contactsService'];
+contactsController.$inject = ['$scope', 'contactsService'];
 
 function contactsController($scope, contactsService) {
     $scope.getContacts = function() {

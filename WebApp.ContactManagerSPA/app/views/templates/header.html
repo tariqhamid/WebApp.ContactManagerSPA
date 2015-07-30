@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-inverse" id="navigation" ng-controller="navigationController">
+﻿<nav class="navbar navbar-inverse" id="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
@@ -12,11 +12,15 @@
                 <li><a href="contacts">Home</a></li>
                 <li><a href="/contact">Add Contact</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logout</a></li>
-                <li><a href="#">Register</a></li>
-                <li><span class="welcome-message">Welcome Vasilis.</span></li>
-            </ul>
-        </div>
-    </div>
+                <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname">
+                 </div>
+                
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><span class="welcome-message">Welcome Vasilis.</span></li>
+                    </ul>
+                </div>
+            </div>
 </nav>

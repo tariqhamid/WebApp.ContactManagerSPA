@@ -32,6 +32,14 @@ body {
     display: inline-block;
 }
 
+.search{
+    padding-top: 10px;
+}
+
+.search input {
+	margin-left: 30px;
+}
+
 @media (max-width: 768px) {
     .welcome-message {
         display: none;
@@ -54,7 +62,7 @@ body {
     padding-top: 7px;
 }
 
-.form-control, .btn {
+.form-control, .btn, .navbar {
     border-radius: 0;
 }
 
