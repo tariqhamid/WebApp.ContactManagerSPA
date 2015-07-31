@@ -1,5 +1,4 @@
 ﻿<nav class="navbar navbar-inverse" id="navigation">
-    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
                 <span class="icon-bar"></span>
@@ -9,18 +8,14 @@
         </div>
         <div class="collapse navbar-collapse" id="nav-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="contacts">Home</a></li>
-                <li><a href="/contact">Add Contact</a></li>
+                <li><a href="contacts"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                <li><a href="/contact"><span class="glyphicon glyphicon-plus"></span>New</a></li>
+                <li><input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname"></li>
             </ul>
-                <div class="col-md-3">
-                        <input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname">
-                 </div>
-                
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Logout</a></li>
-                        <li><a href="#">Register</a></li>
-                        <li><span class="welcome-message">Welcome Vasilis.</span></li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Register</a></li>
+                <li><span class="welcome-message"><span class="glyphicon glyphicon-user"></span>Welcome Vasilis.</span></li>
+            </ul>
+        </div>
 </nav>

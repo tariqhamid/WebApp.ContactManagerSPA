@@ -28,16 +28,8 @@ body {
     background: #eee;
     padding: 20px 30px;
 }
-.controls h3 {
+.controls h5 {
     display: inline-block;
-}
-
-.search{
-    padding-top: 10px;
-}
-
-.search input {
-	margin-left: 30px;
 }
 
 @media (max-width: 768px) {
@@ -55,7 +47,6 @@ body {
     margin-bottom: 0;
     border-color: #2b3e50;
     background-color: #2b3e50;
-    font-size: 16px;
 }
 
 .form-horizontal .control-label {
@@ -74,3 +65,11 @@ body {
 .btn:hover {
     background-color: #2b3e50;
 }
+
+.navbar-nav > li > a span{
+    padding-right:5px
+}
+
+.navbar-nav > li > input{
+    margin-top: 10px;
+} 
