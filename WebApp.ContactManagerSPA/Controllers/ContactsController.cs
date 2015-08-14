@@ -47,7 +47,7 @@ namespace WebApp.ContactManagerSPA.Controllers
             
         }
 
-        //PUT api/Contact/{id}
+        //PUT api/Contacts/{id}
         [HttpPut]
         public IHttpActionResult UpdateContact(string id, [FromBody]Contact contact)
         {
@@ -55,26 +55,24 @@ namespace WebApp.ContactManagerSPA.Controllers
             return Ok(result);
         }
 
+        // POST api/Contacts
         [HttpPost]
-        // POST api/<controller>
         public IHttpActionResult AddContact([FromBody]Contact contact)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            //Mapper.CreateMap<Contact, ContactViewModel>();
-            //ContactViewModel viewModel =
-               //Mapper.Map<Contact, ContactViewModel>(contact);
             var result = contactsService.PostContact(contact);
             return Ok(result);
         }
 
         [HttpDelete]
-        // DELETE api/<controller>/{id}
-        public IHttpActionResult DeleteContact(string id)
+        // DELETE api/Contact/{id}
+        public IHttpActionResult DeleteContact(string id, string rev)
         {
-            return Ok();
+            var result = contactsService.DeleteContact(id, rev);
+            return Ok(result);
         }
     }
 }

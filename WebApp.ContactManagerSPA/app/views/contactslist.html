@@ -1,24 +1,20 @@
-﻿<div data-ng-controller="contactsController" data-ng-init="getContacts()">
+﻿<div data-ng-controller="contactsListController">
     <div class="row contact" data-ng-repeat="contact in contacts | filter:search">
-        <div id="contact_{{contact._id}}">
-            <div class="col-md-8">
-                <h4>{{contact.lastname}},{{contact.firstname}}</h4>
-                <h5>{{contact.email}},{{contact.company}}</h5>
+        <div class="contactrow">
+            <div class="container" id="contact_{{contact._id}}">
+                <div class="col-md-8">
+                    <h4>{{contact.lastname}},{{contact.firstname}}</h4>
+                    <h5>{{contact.email}},{{contact.company}}</h5>
+                </div>
+                <div class="controls col-md-4">
+                    <h5>
+                        <a ng-href="#" ng-click="edit(contact._id)" title="Edit" class="glyphicon glyphicon-edit"></a>
+                    </h5>
+                    <h5>
+                        <a ng-href="#" ng-click="remove(contact._id, contact._rev)" title="Delete" class="glyphicon glyphicon-trash"></a>
+                    </h5>
+                </div>
             </div>
-            <div class="controls col-md-4">
-                <h5>
-                    <a href="contact/{{contact._id}}" title="Edit" class="glyphicon glyphicon-edit"></a>
-                </h5>
-                <h5>
-                    <a ng-href="#" ng-click="deleteContact(contact._id)" title="Delete" class="glyphicon glyphicon-trash"></a>
-                </h5>
-            </div>           
-        </div>
-    </div>
-    <div class="statusRow">
-        <br />
-        <div class="label label-important">
-            <span class="glyphicon glyphicon-thumbs-down icon-white"></span>&nbsp;&nbsp;Error: {{ vm.err }}
         </div>
     </div>
 </div>

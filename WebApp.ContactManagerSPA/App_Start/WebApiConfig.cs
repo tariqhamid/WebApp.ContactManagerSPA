@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Web.Http;
 using WebApp.ContactManagerSPA.DAL;
 using WebApp.ContactManagerSPA.DI;
@@ -34,8 +35,6 @@ namespace WebApp.ContactManagerSPA
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            
         }
     }
 }

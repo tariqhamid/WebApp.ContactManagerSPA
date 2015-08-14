@@ -21,7 +21,7 @@ namespace WebApp.ContactManagerSPA.DAL
         public string CouchDbRequest(string url)
         {
             HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            myHttpWebRequest.ContentType = "APPLICATION/JSON; CHARSET=UTF-8";
+            myHttpWebRequest.ContentType = "application/json; charset=utf-8";
             StreamReader responseReader = new StreamReader(myHttpWebRequest.GetResponse().GetResponseStream());
             return responseReader.ReadToEnd();
         }
@@ -39,6 +39,20 @@ namespace WebApp.ContactManagerSPA.DAL
                 streamWriter.Write(data);
             }
 
+            var response = (HttpWebResponse)request.GetResponse();
+            using (var streamReader = new StreamReader(response.GetResponseStream()))
+            {
+                result = streamReader.ReadToEnd();
+            }
+            return result;
+        }
+
+        public string CouchDbDelete(string id, string rev)
+        {
+            var result = string.Empty;
+            var request = (HttpWebRequest)WebRequest.Create((couchDbConnection + "/" + id + "?rev=" + rev).ToString());
+            request.ContentType = "application/json";
+            request.Method = "DELETE";
             var response = (HttpWebResponse)request.GetResponse();
             using (var streamReader = new StreamReader(response.GetResponseStream()))
             {

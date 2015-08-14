@@ -37,5 +37,10 @@ namespace WebApp.ContactManagerSPA.Services
         {
             return contactsRepository.PostCouchDbContact(contact);
         }
+
+        public Response DeleteContact(string id, string rev)
+        {
+            return contactsRepository.DeleteCouchDbContact(id, rev);
+        }
     }
 }

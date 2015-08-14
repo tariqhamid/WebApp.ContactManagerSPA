@@ -28,8 +28,8 @@ namespace WebApp.ContactManagerSPA.Repository
             {
                 string baseUri = db.couchDbConnection;
                 string json = db.CouchDbRequest(baseUri + "/" + id);
-                JObject jObject = JObject.Parse(json);
-                contact = JsonConvert.DeserializeObject<Contact>(jObject.ToString());
+                JObject contactObject = JObject.Parse(json);
+                contact = JsonConvert.DeserializeObject<Contact>(contactObject.ToString());
 
             }
             catch
@@ -49,8 +49,8 @@ namespace WebApp.ContactManagerSPA.Repository
                 JObject jObject = JObject.Parse(json);
                 foreach (var val in jObject["rows"])
                 {
-                    var yourObject = JsonConvert.DeserializeObject<Contact>(val["value"].ToString());
-                    contactsList.Add(yourObject);
+                    var contactObject = JsonConvert.DeserializeObject<Contact>(val["value"].ToString());
+                    contactsList.Add(contactObject);
                 }
             }
             catch
@@ -65,8 +65,8 @@ namespace WebApp.ContactManagerSPA.Repository
         {
             string data = JsonConvert.SerializeObject(contact, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
             string result = db.CouchDbPost(JObject.Parse(data).ToString());
-            Response resp = JsonConvert.DeserializeObject<Response>(result);
-            return resp;
+            Response response = JsonConvert.DeserializeObject<Response>(result);
+            return response;
         }
 
         public Response PostCouchDbContact(Contact contact)
@@ -74,8 +74,15 @@ namespace WebApp.ContactManagerSPA.Repository
             string data = JsonConvert.SerializeObject(contact, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
             
             string result = db.CouchDbPost(JObject.Parse(data).ToString());
-            Response resp = JsonConvert.DeserializeObject<Response>(result);
-            return resp;
+            Response response = JsonConvert.DeserializeObject<Response>(result);
+            return response;
+        }
+
+        public Response DeleteCouchDbContact(string id, string rev)
+        {
+            string result = db.CouchDbDelete(id, rev);
+            Response response = JsonConvert.DeserializeObject<Response>(result);
+            return response;
         }
     }
 }

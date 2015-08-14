@@ -1,23 +1,21 @@
 ﻿'use strict';
 
-var app = angular.module('ContactManagerApp', ['ngRoute']);
+var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', "ui.bootstrap"]);
+app.config(function ($routeProvider, $locationProvider) {
+    $routeProvider
+        .when('/contacts', {
+            controller: 'contactsListController',
+            templateUrl: 'app/views/contactsList.html'
+        })
+        .when('/contact', {
+            controller: 'addContactController',
+            templateUrl: 'app/views/addContact.html'
+        })
+        .when('/contact:id', {
+            controller: 'editContactController',
+            templateUrl: 'app/views/editContact.html'
+        })
+        .otherwise({ redirectTo: "/contacts" });
 
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    
-    $routeProvider.when('/contacts', {
-        controller: "contactsController",
-        templateUrl: "/app/views/contactslist.html"
-    })
-    .when('/contact/:id', {
-        controller: "contactEditController",
-        templateUrl: "/app/views/contact.html",
-        secure: true
-    })
-    .when('/contact', {
-        controller: "contactEditController",
-        templateUrl: "/app/views/contact.html",
-    }).otherwise({ redirectTo: "/contacts" });
-
-    // use the HTML5 History API
     $locationProvider.html5Mode(true);
-}]);
+});

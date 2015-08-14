@@ -13,5 +13,6 @@ namespace WebApp.ContactManagerSPA.Services
         Contact GetContact(string id);
         Response UpdateContact(string id, Contact contact);
         Response PostContact(Contact contact);
+        Response DeleteContact(string id, string rev);
     }
 }

@@ -13,5 +13,6 @@ namespace WebApp.ContactManagerSPA.Repository
         Contact GetCouchDBContact(string id);
         Response UpdateCouchDbContact(string id, Contact contact);
         Response PostCouchDbContact(Contact contact);
+        Response DeleteCouchDbContact(string id, string rev);
     }
 }
