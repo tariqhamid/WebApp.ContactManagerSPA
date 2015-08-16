@@ -30,7 +30,7 @@ namespace WebApp.ContactManagerSPA.Tests
             contact.Type = "contact";
             contact.Mobile = "88888";
             contact.Telephone = "9999";
-            contact.Company = "mycompany";
+            contact.ContactType = "mycompany";
             contact.Email = "mail@mail.com";
             
             var serv = new ContactsService(repo);
