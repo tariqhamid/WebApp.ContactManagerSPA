@@ -11,7 +11,7 @@
                         <a ng-href="#" ng-click="edit(contact._id)" title="Edit" class="glyphicon glyphicon-edit"></a>
                     </h5>
                     <h5>
-                        <a ng-href="#" ng-click="remove(contact._id, contact._rev)" title="Delete" class="glyphicon glyphicon-trash"></a>
+                        <a ng-href="#" ng-confirm-message="Do you really want to delete this contact?" ngconfirm="remove(contact._id, contact._rev)" class="glyphicon glyphicon-trash"></a>
                     </h5>
                 </div>
             </div>
