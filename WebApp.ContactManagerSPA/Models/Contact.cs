@@ -21,6 +21,8 @@ namespace WebApp.ContactManagerSPA.Models
         public string LastName { get; set; }
         [JsonProperty("contacttype")]
         public string ContactType { get; set; }
+        [JsonProperty("company")]
+        public string Company { get; set; }
         [JsonProperty("email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

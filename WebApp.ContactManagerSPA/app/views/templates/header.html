@@ -8,10 +8,10 @@
     </div>
     <div class="collapse navbar-collapse" id="nav-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="contacts"><span class="glyphicon glyphicon-home" title="Home"></span></a></li>
+            <li><a href="/contacts" ng-click="$parent.search = ''"><span class="glyphicon glyphicon-home" title="Home"></span></a></li>
             <li><a href="/contact"><span class="glyphicon glyphicon-plus" title="Create Contact"></span></a></li>
-            <li><a href="contacts"><i class="fa fa-building" title="View Companies"></i></a></li>
-            <li><a href="contacts"><i class="fa fa-group" title="View Persons"></i></a></li>
+            <li><a href="contacts" ng-click="$parent.search = {contacttype: 'company'}"><i class="fa fa-building" title="View Companies"></i></a></li>
+            <li><a href="contacts" ng-click="$parent.search = {contacttype: 'person'}"><i class="fa fa-group" title="View Persons"></i></a></li>
             <li><input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname"></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
