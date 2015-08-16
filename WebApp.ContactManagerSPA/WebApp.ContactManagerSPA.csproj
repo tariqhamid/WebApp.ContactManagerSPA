@@ -94,6 +94,7 @@
     <Content Include="app\controllers\addContactController.js" />
     <Content Include="app\controllers\contactsListController.js" />
     <Content Include="app\controllers\editContactController.js" />
+    <Content Include="app\directives\confirmDirective.js" />
     <Content Include="app\services\contactServices.js" />
     <Content Include="app\views\addContact.html" />
     <Content Include="app\views\contactsList.html" />
@@ -169,7 +170,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
