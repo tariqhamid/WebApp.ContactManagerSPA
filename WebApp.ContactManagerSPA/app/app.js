@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', "ui.bootstrap"]);
+var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', 'ui.bootstrap', 'confirm']);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/contacts', {
@@ -11,7 +11,7 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'addContactController',
             templateUrl: 'app/views/addContact.html'
         })
-        .when('/contact:id', {
+        .when('/contact/id=:id', {
             controller: 'editContactController',
             templateUrl: 'app/views/editContact.html'
         })
