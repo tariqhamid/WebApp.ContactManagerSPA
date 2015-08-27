@@ -1,0 +1,48 @@
+﻿<div class="form-group" ng-class="{ 'has-error': registerform.firstname.$invalid && (registerform.firstname.$touched || validation)}">
+    <label class="control-label" for="inputFirstname">First Name</label>
+    <input type="text" class="form-control" name="firstname" id="inputFirstname" ng-model="account.firstname" placeholder="First Name" required>
+    <div ng-messages="registerform.firstname.$error" ng-if="registerform.firstname.$touched || validation">
+        <p ng-message="required">Your firstname is required.</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': registerform.lastname.$invalid && (registerform.lastname.$touched || validation)}">
+    <label class="control-label" for="inputLastname">Last Name</label>
+    <input type="text" class="form-control" name="lastname" id="inputLastname" ng-model="account.lastname" placeholder="Last Name" required>
+    <div ng-messages="registerform.lastname.$error" ng-if="registerform.lastname.$touched || validation">
+        <p ng-message="required">Your lastname is required.</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': registerform.email.$invalid && (registerform.email.$touched || validation)}">
+    <label class="control-label" for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail" name="email" ng-model="account.email" placeholder="Email" required />
+    <div ng-messages="registerform.email.$error" ng-if="registerform.email.$touched || validation">
+        <p ng-message="required">Your email is required.</p>
+        <p ng-message="email">This needs to be a valid email</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': registerform.role.$invalid && (registerform.role.$touched || validation)}">
+    <label class="control-label" for="role">Role</label>
+    <select class="form-control" name="role" ng-model="account.role" required>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+    </select>
+    <div ng-messages="contactform.contactType.$error" ng-if="contactform.contactType.$touched || validation">
+        <p ng-message="required">contact type is required.</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': registerform.password.$invalid && (registerform.password.$touched || validation )}">
+    <label class="control-label" for="inputPassword">Password</label>
+    <input type="password" class="form-control" id="inputPassword" name="password" ng-model="account.password" placeholder="Password" required />
+    <div ng-messages="registerform.password.$error" ng-if="registerform.password.$touched || validation">
+        <p ng-message="required">password is required.</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': registerform.confirmpassword.$invalid && (registerform.confirmpassword.$touched || validation )}">
+    <label class="control-label" for="inputConfirmPassword">Confirm Password</label>
+    <input type="password" class="form-control" id="inputConfirmPassword" name="confirmpassword" ng-model="account.confirmpassword" 
+           placeholder="Confirm Password" required ngcompare="account.password"/>
+    <div ng-messages="registerform.confirmpassword.$error" ng-if="registerform.confirmpassword.$touched || validation">
+        <p ng-message="required">password confirmation is required.</p>
+        <p ng-message="ngcompare">passwords do not match</p>
+    </div>
+</div>

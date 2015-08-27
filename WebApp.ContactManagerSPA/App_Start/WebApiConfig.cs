@@ -25,6 +25,8 @@ namespace WebApp.ContactManagerSPA
             var container = new UnityContainer();
             container.RegisterType<IContactsRepository, ContactsRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IContactsService, ContactsService>(new HierarchicalLifetimeManager());
+            container.RegisterType<IAccountsRepository, AccountsRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IAccountsService, AccountsService>(new HierarchicalLifetimeManager());
             container.RegisterType<ILogAdapter, Log4NetAdapter>(new HierarchicalLifetimeManager());
             config.DependencyResolver = new UnityResolver(container); 
             // Web API routes

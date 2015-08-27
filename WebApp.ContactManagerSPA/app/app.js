@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', 'ui.bootstrap', 'confirm']);
+var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', 'ui.bootstrap', 'confirm', 'compare']);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/contacts', {
@@ -14,6 +14,9 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/contact/id=:id', {
             controller: 'editContactController',
             templateUrl: 'app/views/editContact.html'
+        }).when('/register', {
+            controller: 'registerController',
+            templateUrl: 'app/views/registerAccount.html'
         })
         .otherwise({ redirectTo: "/contacts" });
 

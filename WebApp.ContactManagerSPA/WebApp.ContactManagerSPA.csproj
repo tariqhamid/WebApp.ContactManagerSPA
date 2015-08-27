@@ -15,7 +15,7 @@
     <AssemblyName>WebApp.ContactManagerSPA</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -94,12 +94,18 @@
     <Content Include="app\controllers\addContactController.js" />
     <Content Include="app\controllers\contactsListController.js" />
     <Content Include="app\controllers\editContactController.js" />
+    <Content Include="app\controllers\navigationController.js" />
+    <Content Include="app\controllers\registerController.js" />
+    <Content Include="app\directives\compareDirective.js" />
     <Content Include="app\directives\confirmDirective.js" />
+    <Content Include="app\services\accountServices.js" />
     <Content Include="app\services\contactServices.js" />
     <Content Include="app\views\addContact.html" />
     <Content Include="app\views\contactsList.html" />
     <Content Include="app\views\editContact.html" />
+    <Content Include="app\views\partials\_account.html" />
     <Content Include="app\views\partials\_contact.html" />
+    <Content Include="app\views\registerAccount.html" />
     <Content Include="app\views\templates\footer.html" />
     <Content Include="app\views\templates\header.html" />
     <Content Include="Content\contactmanager.css" />
@@ -143,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="DI\UnityResolver.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,10 +157,15 @@
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AccountsRepository.cs" />
     <Compile Include="Repository\ContactsRepository.cs" />
+    <Compile Include="Repository\IAccountsRepository.cs" />
     <Compile Include="Repository\IContactsRepository.cs" />
+    <Compile Include="Services\AccountsService.cs" />
     <Compile Include="Services\ContactsService.cs" />
+    <Compile Include="Services\IAccountsService.cs" />
     <Compile Include="Services\IContactsService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,7 +210,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3861</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3861/</IISUrl>
+          <IISUrl>https://localhost:44300/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

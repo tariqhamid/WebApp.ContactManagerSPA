@@ -1,4 +1,5 @@
-﻿'use strict'
+﻿'use strict';
+
 angular.module('confirm',['ui.bootstrap'])
     .directive('ngconfirm', function ($modal) {
         var ModalInstanceCtrl = function ($scope, $modalInstance) {
@@ -22,7 +23,10 @@ angular.module('confirm',['ui.bootstrap'])
 
                     
                     var modalHtml = '<div class="modal-body">' + message + '</div>';
-                    modalHtml += '<div class="modal-footer"><button class="btn btn-primary" ng-click="ok()">OK</button><button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>';
+                    modalHtml += '<div class="modal-footer">'+
+                                    '<button class="btn btn-primary" ng-click="ok()">OK</button>'+
+                                    '<button class="btn btn-warning" ng-click="cancel()">Cancel</button>'+
+                                '</div>';
 
                     var modalInstance = $modal.open({
                         template: modalHtml,
@@ -30,11 +34,8 @@ angular.module('confirm',['ui.bootstrap'])
                     });
 
                     modalInstance.result.then(function () {
-                        scope.ngconfirm(); //raise an error : $digest already in progress
-                    }, function () {
-                        //Modal dismissed
+                        scope.ngconfirm();
                     });
-                    //*/
 
                 });
 
