@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = angular.module('contactManagerApp', ['ngRoute', 'ngResource', 'ngMessages', 'ui.bootstrap', 'confirm', 'compare']);
+var app = angular.module('contactManagerApp', ['', 'ngResource', 'ngMessages', 'ui.bootstrap', 'confirm', 'compare']);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/contacts', {
