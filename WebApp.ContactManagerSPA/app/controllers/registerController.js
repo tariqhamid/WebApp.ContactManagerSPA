@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-app.controller('registerController', function ($scope, Account, $location) {
+app.controller('registerController', function ($scope, Account, $state) {
     $scope.account = new Account;
     $scope.validation = false;
     $scope.registerAccount = function (registerform) {
@@ -9,7 +9,7 @@ app.controller('registerController', function ($scope, Account, $location) {
         }
         else {
             $scope.account.$save();
-            $location.url('/contacts');
+            $state.transitionTo('root.contacts');
         }
     }
 });

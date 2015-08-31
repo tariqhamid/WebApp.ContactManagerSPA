@@ -94,20 +94,19 @@
     <Content Include="app\controllers\addContactController.js" />
     <Content Include="app\controllers\contactsListController.js" />
     <Content Include="app\controllers\editContactController.js" />
-    <Content Include="app\controllers\navigationController.js" />
+    <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\registerController.js" />
-    <Content Include="app\directives\compareDirective.js" />
-    <Content Include="app\directives\confirmDirective.js" />
-    <Content Include="app\services\accountServices.js" />
-    <Content Include="app\services\contactServices.js" />
-    <Content Include="app\views\addContact.html" />
+    <Content Include="app\services\accountService.js" />
+    <Content Include="app\services\contactsService.js" />
+    <Content Include="app\views\addcontact.html" />
     <Content Include="app\views\contactsList.html" />
-    <Content Include="app\views\editContact.html" />
     <Content Include="app\views\partials\_account.html" />
     <Content Include="app\views\partials\_contact.html" />
-    <Content Include="app\views\registerAccount.html" />
+    <Content Include="app\views\editcontact.html" />
+    <Content Include="app\views\register.html" />
     <Content Include="app\views\templates\footer.html" />
     <Content Include="app\views\templates\header.html" />
+    <Content Include="app\views\login.html" />
     <Content Include="Content\contactmanager.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -181,6 +180,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
   </ItemGroup>

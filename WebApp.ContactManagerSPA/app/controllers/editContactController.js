@@ -1,8 +1,8 @@
 ﻿'use strict';
 
-app.controller('editContactController', function ($scope, $location, Contact, $routeParams) {
-    
-    $scope.contact = Contact.get({ id: $routeParams.id });
+app.controller('editContactController', function ($scope, $state, Contact, $stateParams) {
+
+    $scope.contact = Contact.get({ id: $stateParams.id });
     $scope.validation = false;
     $scope.addContact = function (contactform) {
         if ($scope.contactform.$invalid) {
@@ -10,7 +10,7 @@ app.controller('editContactController', function ($scope, $location, Contact, $r
         }
         else {
             $scope.contact.$save();
-            $location.url('/contacts');
+            $state.transitionTo('root.contacts');
         }
     }
 });

@@ -10,13 +10,11 @@
     <link href="Content/contactmanager.css" rel="stylesheet">
 </head>
 <body>
-    <div ng-include='"app/views/templates/header.html"'></div>
-    <div class="main" ng-view="">
-    </div>
-    <div ng-include='"app/views/templates/footer.html"'></div>
-
+    <div ui-view="header"></div>
+    <div class="main" ui-view></div>
+    <div ui-view="footer"></div>
     <!-- 3rd party libraries -->
-    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery-2.1.4.js"></script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-ui-router.js"></script>
     <script src="Scripts/angular-resource.js"></script>
@@ -27,20 +25,17 @@
 
     <!-- Load app main script -->
     <script src="app/app.js"></script>
-
+    
     <!-- Load controllers -->
     <script src="app/controllers/contactsListController.js"></script>
     <script src="app/controllers/addContactController.js"></script>
     <script src="app/controllers/editContactController.js"></script>
-    <script src="app/controllers/navigationController.js"></script>
     <script src="app/controllers/registerController.js"></script>
-
+    <script src="app/controllers/loginController.js"></script>
+    
     <!-- Load services -->
-    <script src="app/services/contactServices.js"></script>
-    <script src="app/services/accountServices.js"></script>
-
+    <script src="app/services/contactsService.js"></script>
+    <script src="app/services/accountService.js"></script>
     <!-- Load directives-->
-    <script src="app/directives/confirmDirective.js"></script>
-    <script src="app/directives/compareDirective.js"></script>
 </body>
 </html>

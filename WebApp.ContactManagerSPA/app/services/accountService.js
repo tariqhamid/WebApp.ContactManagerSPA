@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-app.factory('Account', function($resource){
+app.factory('Account', function ($resource) {
     return $resource('api/Accounts/:id', { id: '@id' }, {
         get: { method: 'GET' },
         query: { method: 'GET', isArray: true },

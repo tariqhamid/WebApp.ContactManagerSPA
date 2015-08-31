@@ -1,57 +1,57 @@
 ﻿
-    <div class="form-group" ng-class="{ 'has-error': contactform.firstname.$invalid && (contactform.firstname.$touched || validation)}">
-        <label class="control-label" for="inputFirstname">First Name</label>
-        <input type="text" class="form-control" name="firstname" id="inputFirstname" ng-model="contact.firstname" placeholder="First Name" required>
-        <div ng-messages="contactform.firstname.$error" ng-if="contactform.firstname.$touched || validation">
-            <p ng-message="required">Your firstname is required.</p>
-        </div>
+<div class="form-group" ng-class="{ 'has-error': contactform.firstname.$invalid && (contactform.firstname.$touched || validation)}">
+    <label class="control-label" for="inputFirstname">First Name</label>
+    <input type="text" class="form-control" name="firstname" id="inputFirstname" ng-model="contact.firstname" placeholder="First Name" required>
+    <div ng-messages="contactform.firstname.$error" ng-if="contactform.firstname.$touched || validation">
+        <p ng-message="required">Your firstname is required.</p>
     </div>
-    <div class="form-group" ng-class="{ 'has-error': contactform.lastname.$invalid && (contactform.lastname.$touched || validation)}">
-        <label class="control-label" for="inputLastname">Last Name</label>
-        <input type="text" class="form-control" name="lastname" id="inputLastname" ng-model="contact.lastname" placeholder="Last Name" required>
-        <div ng-messages="contactform.lastname.$error" ng-if="contactform.lastname.$touched || validation">
-            <p ng-message="required">Your lastname is required.</p>
-        </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': contactform.lastname.$invalid && (contactform.lastname.$touched || validation)}">
+    <label class="control-label" for="inputLastname">Last Name</label>
+    <input type="text" class="form-control" name="lastname" id="inputLastname" ng-model="contact.lastname" placeholder="Last Name" required>
+    <div ng-messages="contactform.lastname.$error" ng-if="contactform.lastname.$touched || validation">
+        <p ng-message="required">Your lastname is required.</p>
     </div>
-    <div class="form-group" ng-class="{ 'has-error': contactform.contactType.$invalid && (contactform.contactType.$touched || validation)}">
-        <label class="control-label" for="contactType">Contact Type</label>
-        <select class="form-control" name="contactType" ng-model="contact.contacttype" required>
-            <option value="company">Company</option>
-            <option value="person">Person</option>
-        </select>
-        <div ng-messages="contactform.contactType.$error" ng-if="contactform.contactType.$touched || validation">
-            <p ng-message="required">contact type is required.</p>
-        </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': contactform.contactType.$invalid && (contactform.contactType.$touched || validation)}">
+    <label class="control-label" for="contactType">Contact Type</label>
+    <select class="form-control" name="contactType" ng-model="contact.contacttype" required>
+        <option value="company">Company</option>
+        <option value="person">Person</option>
+    </select>
+    <div ng-messages="contactform.contactType.$error" ng-if="contactform.contactType.$touched || validation">
+        <p ng-message="required">contact type is required.</p>
     </div>
-    <div class="form-group">
-        <label for="inputCompany">Company</label>
-        <input type="text" class="form-control" id="inputCompany" ng-model="contact.company" placeholder="Company">
+</div>
+<div class="form-group">
+    <label for="inputCompany">Company</label>
+    <input type="text" class="form-control" id="inputCompany" ng-model="contact.company" placeholder="Company">
+</div>
+<div class="form-group" ng-class="{ 'has-error': contactform.email.$invalid && (contactform.email.$touched || validation)}">
+    <label class="control-label" for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail" name="email" ng-model="contact.email" placeholder="Email" required />
+    <div ng-messages="contactform.email.$error" ng-if="contactform.email.$touched || validation">
+        <p ng-message="required">Your email is required.</p>
+        <p ng-message="email">This needs to be a valid email</p>
     </div>
-    <div class="form-group" ng-class="{ 'has-error': contactform.email.$invalid && (contactform.email.$touched || validation)}">
-        <label class="control-label" for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" name="email" ng-model="contact.email" placeholder="Email" required/>
-        <div ng-messages="contactform.email.$error" ng-if="contactform.email.$touched || validation">
-            <p ng-message="required">Your email is required.</p>
-            <p ng-message="email">This needs to be a valid email</p>
-        </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': contactform.telephone.$invalid && (contactform.telephone.$touched || validation )}">
+    <label class="control-label" for="inputTelephone">Telephone</label>
+    <input type="tel" class="form-control" id="inputTelephone" name="telephone" ng-model="contact.telephone" placeholder="Telephone" ng-maxlength="10" ng-minlength="10" ng-pattern="/^\d{10}$/" required />
+    <div ng-messages="contactform.telephone.$error" ng-if="contactform.telephone.$touched || validation">
+        <p ng-message="required">Your telephone is required.</p>
+        <p ng-message when="pattern">This needs to be a valid phone number</p>
+        <p ng-message when="minlength">Phone number should be 10 digits long</p>
+        <p ng-message when="maxlenght">Phone number should be 10 digits long</p>
     </div>
-    <div class="form-group" ng-class="{ 'has-error': contactform.telephone.$invalid && (contactform.telephone.$touched || validation )}">
-        <label class="control-label" for="inputTelephone">Telephone</label>
-        <input type="tel" class="form-control" id="inputTelephone" name="telephone" ng-model="contact.telephone" placeholder="Telephone" ng-maxlength="10" ng-minlength="10" ng-pattern="/^\d{10}$/" required/>
-        <div ng-messages="contactform.telephone.$error" ng-if="contactform.telephone.$touched || validation">
-            <p ng-message="required">Your telephone is required.</p>
-            <p ng-message when="pattern">This needs to be a valid phone number</p>
-            <p ng-message when="minlength">Phone number should be 10 digits long</p>
-            <p ng-message when="maxlenght">Phone number should be 10 digits long</p>
-        </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': contactform.mobile.$invalid && (contactform.mobile.$touched || validation)}">
+    <label class="control-label" for="inputMobile">Mobile</label>
+    <input type="tel" class="form-control" id="inputMobile" name="mobile" ng-model="contact.mobile" placeholder="Mobile" ng-maxlength="10" ng-minlength="10" ng-pattern="/^\d{10}$/" required>
+    <div ng-messages="contactform.mobile.$error" ng-if="contactform.mobile.$touched || validation">
+        <p ng-message="required">Your mobile is required.</p>
+        <p ng-message when="pattern">This needs to be a valid phone number</p>
+        <p ng-message when="minlength">Phone number should be 10 digits long</p>
+        <p ng-message when="maxlenght">Phone number should be 10 digits long</p>
     </div>
-    <div class="form-group" ng-class="{ 'has-error': contactform.mobile.$invalid && (contactform.mobile.$touched || validation)}">
-        <label class="control-label" for="inputMobile">Mobile</label>
-        <input type="tel" class="form-control" id="inputMobile" name="mobile" ng-model="contact.mobile" placeholder="Mobile" ng-maxlength="10" ng-minlength="10" ng-pattern="/^\d{10}$/" required>
-        <div ng-messages="contactform.mobile.$error" ng-if="contactform.mobile.$touched || validation">
-            <p ng-message="required">Your mobile is required.</p>
-            <p ng-message when="pattern">This needs to be a valid phone number</p>
-            <p ng-message when="minlength">Phone number should be 10 digits long</p>
-            <p ng-message when="maxlenght">Phone number should be 10 digits long</p>
-        </div>
-    </div>
+</div>

@@ -39,8 +39,8 @@
 </div>
 <div class="form-group" ng-class="{ 'has-error': registerform.confirmpassword.$invalid && (registerform.confirmpassword.$touched || validation )}">
     <label class="control-label" for="inputConfirmPassword">Confirm Password</label>
-    <input type="password" class="form-control" id="inputConfirmPassword" name="confirmpassword" ng-model="account.confirmpassword" 
-           placeholder="Confirm Password" required ngcompare="account.password"/>
+    <input type="password" class="form-control" id="inputConfirmPassword" name="confirmpassword" ng-model="account.confirmpassword"
+           placeholder="Confirm Password" required ngcompare="account.password" />
     <div ng-messages="registerform.confirmpassword.$error" ng-if="registerform.confirmpassword.$touched || validation">
         <p ng-message="required">password confirmation is required.</p>
         <p ng-message="ngcompare">passwords do not match</p>

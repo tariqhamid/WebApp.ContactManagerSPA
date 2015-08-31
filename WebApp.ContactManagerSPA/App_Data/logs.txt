@@ -137,3 +137,7 @@
 2015-08-10 20:32:06,087 [9] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
 2015-08-10 20:32:07,272 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
 2015-08-10 20:33:05,549 [6] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - Unable to connect with couchdb
+2015-08-31 23:22:08,795 [10] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id1
+2015-08-31 23:22:08,843 [9] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with id1
+2015-09-01 01:14:08,659 [38] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idid=54a5eb67246c6ef6adb302c1e7001a1d
+2015-09-01 01:14:08,694 [20] ERROR WebApp.ContactManagerSPA.Infrastructure.Log4NetAdapter - There was an error while trying to load contact with idid=54a5eb67246c6ef6adb302c1e7001a1d
