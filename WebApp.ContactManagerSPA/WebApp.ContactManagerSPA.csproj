@@ -96,6 +96,7 @@
     <Content Include="app\controllers\editContactController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\registerController.js" />
+    <Content Include="app\directives\comparePasswords.js" />
     <Content Include="app\directives\confirmDeleteModal.js" />
     <Content Include="app\services\accountService.js" />
     <Content Include="app\services\contactsService.js" />

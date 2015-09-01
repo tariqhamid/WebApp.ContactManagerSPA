@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = angular.module('contactManagerApp', ['ui.router', 'ngResource', 'ngMessages', 'confirm']);
+var app = angular.module('contactManagerApp', ['ui.router', 'ngResource', 'ngMessages', 'confirm', 'compare']);
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
         .state('root', {
