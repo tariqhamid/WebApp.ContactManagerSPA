@@ -96,6 +96,7 @@
     <Content Include="app\controllers\editContactController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\registerController.js" />
+    <Content Include="app\directives\confirmDeleteModal.js" />
     <Content Include="app\services\accountService.js" />
     <Content Include="app\services\contactsService.js" />
     <Content Include="app\views\addcontact.html" />
@@ -180,7 +181,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
   </ItemGroup>

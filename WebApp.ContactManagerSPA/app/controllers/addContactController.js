@@ -8,8 +8,9 @@ app.controller('addContactController', function ($scope, $state, Contact) {
             $scope.validation = true;
         }
         else {
-            $scope.contact.$save();
-            $state.transitionTo('root.contacts');
+            $scope.contact.$save().then(function () {
+                $state.transitionTo('root.contacts',{}, { reload: true });
+            });
         }
     }
 });
