@@ -1,9 +1,12 @@
-﻿using System;
+﻿using JWT;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using System.Net;
+using System.Net.Http;
 using WebApp.ContactManagerSPA.Models;
 using WebApp.ContactManagerSPA.Repository;
 
@@ -12,48 +15,29 @@ namespace WebApp.ContactManagerSPA.Services
     public class AccountsService:IAccountsService
     {
         private readonly IAccountsRepository accountRepository;
-
-        public AccountsService(IAccountsRepository accountRepository)
+        private readonly ICryptoService cryptoService;
+        public AccountsService(ICryptoService cryptoService, IAccountsRepository accountRepository)
         {
+            this.cryptoService = cryptoService;
             this.accountRepository = accountRepository;
-        }
-
-        public Response LoginAccount(string username, string password)
-        {
-            return accountRepository.LoginCouchDbAccount(username, password);
         }
 
         public Response RegisterAccount(Account account)
         {
+            Response response = new Response();
             account.Id = "org.couchdb.user:" + account.Email.Split('@')[0];
-            account.Salt = GenerateSalt(32);
-            account.PasswordHash = CreateSHAHash(account.Password, account.Salt);
-            return accountRepository.RegisterCouchDbContact(account);
-        }
-
-        private string GenerateSalt(int saltLength)
-        {
-            var salt = new byte[saltLength];
-            using (var random = new RNGCryptoServiceProvider())
+            account.Salt = cryptoService.GenerateSalt(32);
+            account.PasswordHash = cryptoService.CreateSHAHash(account.Password, account.Salt);
+            if (accountRepository.GetAccount(account.Email) == null)
             {
-                random.GetBytes(salt);
+                response = accountRepository.RegisterCouchDbAccount(account);
             }
-
-            return Convert.ToBase64String(salt);
-        }
-
-        private string CreateSHAHash(string Password, string Salt)
-        {
-            string saltAndPwd = String.Concat(Password, Salt);
-            SHA256 algorithm = SHA256.Create();
-            byte[] data = algorithm.ComputeHash(Encoding.UTF8.GetBytes(saltAndPwd));
-            string sh1 = "";
-            for (int i = 0; i < data.Length; i++)
+            else
             {
-                sh1 += data[i].ToString("x2");
+                //return Request.CreateResponse(HttpStatusCode.BadRequest, "User already exist.");
+                response.Message = string.Format("Account with {0} already exists", account.Email);
             }
-            return sh1;
+            return response;
         }
-
     }
 }

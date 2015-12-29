@@ -9,8 +9,8 @@ app.controller('addContactController', function ($scope, $state, Contact) {
         }
         else {
             $scope.contact.$save().then(function () {
-                $state.transitionTo('root.contacts',{}, { reload: true });
+                $state.transitionTo('root.contacts', {}, { reload: true });
             });
         }
-    }
+    };
 });

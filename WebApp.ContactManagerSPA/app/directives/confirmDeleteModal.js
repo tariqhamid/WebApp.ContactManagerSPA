@@ -40,5 +40,5 @@ angular.module('confirm', ['ui.bootstrap'])
                 });
 
             }
-        }
+        };
     });

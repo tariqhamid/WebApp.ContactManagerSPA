@@ -7,9 +7,8 @@ using WebApp.ContactManagerSPA.Models;
 
 namespace WebApp.ContactManagerSPA.Services
 {
-    public interface IAccountsService
+    public interface IUsersService
     {
-        //Response LoginAccount(Account account);
-        Response RegisterAccount(Account account);
+        Account LoginUser(string username, string password);
     }
 }

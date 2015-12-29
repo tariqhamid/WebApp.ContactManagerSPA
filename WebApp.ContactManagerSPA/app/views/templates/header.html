@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-inverse" id="navigation">
+﻿<nav class="navbar navbar-inverse" id="navigation" data-ng-controller="navigationController">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
             <span class="icon-bar"></span>
@@ -12,12 +12,18 @@
             <li><a ui-sref="root.addcontact"><span class="glyphicon glyphicon-plus" title="Create Contact"></span></a></li>
             <li><a href="contacts" ng-click="$parent.search = {contacttype: 'company'}"><i class="fa fa-building" title="View Companies"></i></a></li>
             <li><a href="contacts" ng-click="$parent.search = {contacttype: 'person'}"><i class="fa fa-group" title="View Persons"></i></a></li>
-            <li><input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname"></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" ng-click="login()"><span class="glyphicon glyphicon-log-out" title="Logout"></span></a></li>
+            <li><a href="#" ng-click="logoutUser()"><span class="glyphicon glyphicon-log-out" title="Logout"></span></a></li>
             <li><a ui-sref="root.register"><span class="glyphicon glyphicon-pencil" title="Register User"></span></a></li>
             <li><span class="welcome-message"><span class="glyphicon glyphicon-user"></span>Welcome Vasilis.</span></li>
         </ul>
+        <form class="navbar-form">
+            <div class="form-group" style="display:inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" value="" data-ng-model="$parent.search.lastname">
+                </div>
+            </div>
+        </form>
     </div>
 </nav>

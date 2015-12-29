@@ -12,5 +12,5 @@ app.controller('editContactController', function ($scope, $state, Contact, $stat
             $scope.contact.$save();
             $state.transitionTo('root.contacts');
         }
-    }
+    };
 });

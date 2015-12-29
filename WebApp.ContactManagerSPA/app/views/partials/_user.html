@@ -1,0 +1,15 @@
+﻿<div class="form-group" ng-class="{ 'has-error': loginform.email.$invalid && (loginform.email.$touched || validation)}">
+    <label class="control-label" for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail" name="email" ng-model="user.email" placeholder="Email" required />
+    <div ng-messages="loginform.email.$error" ng-if="loginform.email.$touched || validation">
+        <p ng-message="required">Your email is required.</p>
+        <p ng-message="email">This needs to be a valid email</p>
+    </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': loginform.password.$invalid && (loginform.password.$touched || validation )}">
+    <label class="control-label" for="inputPassword">Password</label>
+    <input type="password" class="form-control" id="inputPassword" name="password" ng-model="user.password" placeholder="Password" required />
+    <div ng-messages="loginform.password.$error" ng-if="loginform.password.$touched || validation">
+        <p ng-message="required">password is required.</p>
+    </div>
+</div>

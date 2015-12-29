@@ -1,17 +1,21 @@
 ﻿'use strict';
 
-var app = angular.module('contactManagerApp', ['ui.router', 'ngResource', 'ngMessages', 'confirm', 'compare']);
-app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+var app = angular.module('contactManagerApp', ['ui.router', 'ngResource', 'ngMessages','confirm', 'compare']);
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $stateProvider
         .state('root', {
+            abstract:true,
             url: '',
             views: {
                 'header': {
                     templateUrl: 'app/views/templates/header.html'
                 },
                 'footer': {
-                    templateUrl: 'app/views/templates/footer.html',
+                    templateUrl: 'app/views/templates/footer.html'
                 }
+            },
+            data: {
+                requireLogin: true
             }
         })
         .state('root.contacts', {
@@ -21,15 +25,15 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'app/views/templates/header.html'
                 },
                 'footer': {
-                    templateUrl: 'app/views/templates/footer.html',
+                    templateUrl: 'app/views/templates/footer.html'
                 },
                 '@': {
                     templateUrl: 'app/views/contactsList.html',
-                    controller: 'contactsListController',
+                    controller: 'contactsListController'
                 }
             }
-        }).
-        state('root.addcontact', {
+        })
+        .state('root.addcontact', {
             url: '/contact',
             views: {
                 '@': {
@@ -63,9 +67,24 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'app/views/login.html',
                     controller: 'loginController'
                 }
+            },
+            data: {
+                requireLogin: false
             }
         });
     $urlRouterProvider.otherwise('/login');
 
     $locationProvider.html5Mode(true).hashPrefix('!');
+
+    $httpProvider.interceptors.push('authInterceptor');
+});
+app.run(function ($rootScope, $state) {
+    // register listener to watch route changes
+    $rootScope.$on("$stateChangeStart", function (event, toState) {
+        if (!$rootScope.isAuthenticated && toState.name != 'login') {
+            $state.go('login');
+            event.preventDefault();
+            return;
+        }
+    });
 });

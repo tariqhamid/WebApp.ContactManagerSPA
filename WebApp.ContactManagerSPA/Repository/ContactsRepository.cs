@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 using WebApp.ContactManagerSPA.DAL;
+using WebApp.ContactManagerSPA.Filters;
 using WebApp.ContactManagerSPA.Infrastructure;
 using WebApp.ContactManagerSPA.Models;
 
@@ -14,8 +15,7 @@ namespace WebApp.ContactManagerSPA.Repository
 {
     public class ContactsRepository:IContactsRepository
     {
-        //CouchDB db = new CouchDB(ConfigurationManager.ConnectionStrings["couchdb"].ConnectionString);
-        CouchDB db = new CouchDB("http://vasileios:vasileios@127.0.0.1:5984/contactsdb");
+        CouchDB db = new CouchDB(ConfigurationManager.ConnectionStrings["couchdb"].ConnectionString);
         private ILogAdapter logger;
         public ContactsRepository(ILogAdapter logger){
             this.logger = logger;
@@ -39,7 +39,8 @@ namespace WebApp.ContactManagerSPA.Repository
             }
             return contact;
         }
-        public IEnumerable<Contact> GetCouchDBContacts()
+
+        public IList<Contact> GetCouchDBContacts()
         {
             List<Contact> contactsList = new List<Contact>();
             try

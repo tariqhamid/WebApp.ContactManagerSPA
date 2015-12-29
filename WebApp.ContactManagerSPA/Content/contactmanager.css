@@ -1,6 +1,4 @@
-﻿@import url(//fonts.googleapis.com/css?family=Open+Sans:300);
-
-body {   
+﻿body {   
     font-family: 'Open Sans',sans-serif;
     font-size: 14px;
     background: #eee;
@@ -9,6 +7,18 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.login-form-container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.login-form{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 .controls a,
@@ -31,7 +41,7 @@ body {
     box-shadow: 0 4px 4px -2px #000000;
 }
 
-.contactform-container{
+.form-container{
     max-width:600px;
 }
 

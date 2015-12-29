@@ -10,6 +10,7 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using WebApp.ContactManagerSPA.DAL;
 using WebApp.ContactManagerSPA.DI;
+using WebApp.ContactManagerSPA.Filters;
 using WebApp.ContactManagerSPA.Infrastructure;
 using WebApp.ContactManagerSPA.Repository;
 using WebApp.ContactManagerSPA.Services;
@@ -20,14 +21,18 @@ namespace WebApp.ContactManagerSPA
     {
         public static void Register(HttpConfiguration config)
         {
-            //var config = new HttpSelfHostConfiguration("http://localhost:8080");
+            //enable Cross-Origin Resource Sharing (CORS) support
+            config.EnableCors();
             // Web API configuration and services
             var container = new UnityContainer();
-            container.RegisterType<IContactsRepository, ContactsRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<IContactsService, ContactsService>(new HierarchicalLifetimeManager());
-            container.RegisterType<IAccountsRepository, AccountsRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<IAccountsService, AccountsService>(new HierarchicalLifetimeManager());
-            container.RegisterType<ILogAdapter, Log4NetAdapter>(new HierarchicalLifetimeManager());
+            container.RegisterType<IContactsRepository, ContactsRepository>()
+                .RegisterType<IContactsService, ContactsService>()
+                .RegisterType<ICryptoService, CryptoService>()
+                .RegisterType<IAccountsRepository, AccountsRepository>()
+                .RegisterType<IAccountsService, AccountsService>()
+                .RegisterType<IUsersService, UsersService>()
+                .RegisterType<ILogAdapter, Log4NetAdapter>();
+
             config.DependencyResolver = new UnityResolver(container); 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -37,6 +42,8 @@ namespace WebApp.ContactManagerSPA
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.MessageHandlers.Add(new AuthHandler());
         }
     }
 }

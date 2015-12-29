@@ -10,12 +10,12 @@ angular.module('compare', [])
             link: function (scope, element, attributes, ngModel) {
 
                 ngModel.$validators.ngcompare = function (modelValue) {
-                    return modelValue == scope.account;
+                    return modelValue === scope.account;
                 };
 
                 scope.$watch("account", function () {
                     ngModel.$validate();
                 });
             }
-        }
+        };
     });

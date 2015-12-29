@@ -9,7 +9,7 @@ namespace WebApp.ContactManagerSPA.Repository
 {
     public interface IContactsRepository
     {
-        IEnumerable<Contact> GetCouchDBContacts();
+        IList<Contact> GetCouchDBContacts();
         Contact GetCouchDBContact(string id);
         Response UpdateCouchDbContact(string id, Contact contact);
         Response PostCouchDbContact(Contact contact);

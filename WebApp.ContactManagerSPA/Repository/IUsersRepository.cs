@@ -7,9 +7,8 @@ using WebApp.ContactManagerSPA.Models;
 
 namespace WebApp.ContactManagerSPA.Repository
 {
-    public interface IAccountsRepository
+    public interface IUsersRepository
     {
-        Account GetAccount(string email);
-        Response RegisterCouchDbAccount(Account account);
+         //Account GetCouchDbAccountByEmail(string email);
     }
 }

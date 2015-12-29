@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApp.ContactManagerSPA.Models;
 
 namespace WebApp.ContactManagerSPA.Services
 {
-    public interface IAccountsService
+    public interface ICryptoService
     {
-        //Response LoginAccount(Account account);
-        Response RegisterAccount(Account account);
+        string GenerateSalt(int saltLength);
+        string CreateSHAHash(string password, string salt);
     }
 }

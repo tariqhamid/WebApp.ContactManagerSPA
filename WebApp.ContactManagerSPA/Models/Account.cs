@@ -19,10 +19,10 @@ namespace WebApp.ContactManagerSPA.Models
         public string Lastname { get; set; }
         [JsonProperty("email")]
         public string Email { get; set; }
+        [JsonProperty("password")]
         public string Password { get; set; }
         [JsonProperty("role")]
         public string Role { get; set; }
-        [JsonProperty("password")]
         public string PasswordHash { get; set; }
         [JsonProperty("salt")]
         public string Salt { get; set; }

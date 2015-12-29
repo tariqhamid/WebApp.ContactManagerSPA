@@ -5,13 +5,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using WebApp.ContactManagerSPA.Filters;
 using WebApp.ContactManagerSPA.Infrastructure;
 using WebApp.ContactManagerSPA.Models;
 using WebApp.ContactManagerSPA.Services;
 
 namespace WebApp.ContactManagerSPA.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Contacts")]
+    [Authorize]
     public class ContactsController : ApiController
     {
         private IContactsService contactsService;

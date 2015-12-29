@@ -1,4 +1,13 @@
-﻿<div ng-controller="loginController">
-    {{name}}
-    <a ui-sref="contacts">Go Home</a>
+﻿<div class="login-form-container">
+    <div class="container form-container">
+        <div class="contactEdit row" data-ng-controller="loginController">
+            <h2 class="contact-header">Login</h2>
+            <form name="loginform" novalidate class="form-horizontal">
+                <div ng-include='"app/views/partials/_user.html"'></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary form-control" data-ng-click="loginUser()" value="Login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

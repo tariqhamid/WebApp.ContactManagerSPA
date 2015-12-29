@@ -10,5 +10,5 @@ app.controller('contactsListController', function ($scope, $state, Contact) {
         }).$promise.then(function () {
             $state.go($state.current, {}, { reload: true });
         });
-    }
+    };
 });
